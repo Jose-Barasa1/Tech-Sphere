@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+TechSphere - Online Electronics Shop
+Welcome to TechSphere – an online electronics store built with React and styled with Bootstrap. Explore a wide range of electronic gadgets, read reviews, and manage your shopping cart with ease. The app uses a local mock API powered by JSON Server for product data and reviews.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Browse Products: View a list of electronics, including smartphones, laptops, and accessories.
+Product Detail Pages: View detailed product information, reviews, and ratings.
+Leave Reviews: Users can submit ratings and reviews for products.
+Shopping Cart: Add products to the cart and proceed to checkout (payment integration can be added).
+Responsive Design: Optimized for mobile, tablet, and desktop devices using Bootstrap.
+Tech Stack
+Frontend:
 
-## Available Scripts
+React: For building the user interface.
+React Router: For navigation.
+Bootstrap: For responsive UI components.
+Mock API:
 
-In the project directory, you can run:
+JSON Server: Provides a local REST API using db.json for product and review data.
+Installation
+1. Clone the repository
+bash
+Copy code
+git clone https://github.com/your-username/techsphere.git
+cd techsphere
+2. Install dependencies
+Make sure Node.js and npm are installed. Then, run:
 
-### `npm start`
+bash
+Copy code
+npm install
+3. Setup and run JSON Server
+Install JSON Server:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+npm install -g json-server
+Start the JSON Server to serve db.json:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+json-server --watch db.json --port 5000
+4. Run the React app
+In a separate terminal, run the React app:
 
-### `npm test`
+bash
+Copy code
+npm start
+The app will be available at http://localhost:3000, and the mock API will run on http://localhost:5000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Usage
+Navigate to http://localhost:3000 to access the app.
+Browse products, view details, and leave reviews.
+Add products to the shopping cart and proceed to checkout (payment integration can be added later).
+API Endpoints
+GET /products: Fetch all products.
+GET /products/:id: Fetch a single product by ID.
+GET /reviews: Fetch all reviews.
+POST /reviews: Submit a new review for a product.
+Contributing
+Contributions are welcome! To contribute:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Fork the repository.
+Create a new branch: git checkout -b feature-branch.
+Make changes and commit: git commit -am 'Add new feature'.
+Push to your fork: git push origin feature-branch.
+Open a pull request.
+License
+This project is licensed under the MIT License – see the LICENSE file for details.
