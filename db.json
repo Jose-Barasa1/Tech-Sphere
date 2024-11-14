@@ -1,0 +1,257 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "name": "Smartphone X1000",
+        "description": "A powerful smartphone with a 6.5-inch display.",
+        "price": 799.99,
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQBPbcYpal9xtpI-bqIodsO7oRxG79UPX8wkWHWwMa2VsjKA9pNcrptwkr2PkWnSWumz1qggeHQNKEoeYroo7xvJxPw_LJudOWs2vmomwc_4LcovYtiG_QGnXwNNt3C-i6BYlikpw&usqp=CAc",
+        "rating": 4.5,
+        "reviews": [
+          {
+            "user": "JohnDoe123",
+            "review": "Great phone! Amazing display and fast performance.",
+            "rating": 5
+          },
+          {
+            "user": "JaneSmith",
+            "review": "Good value for the price, but battery life could be better.",
+            "rating": 4
+          }
+        ],
+        "category": "Phones"
+      },
+      {
+        "id": "2",
+        "name": "Laptop Pro 15",
+        "description": "A high-performance laptop with a 15-inch Retina display.",
+        "price": 1499.99,
+        "image": "https://www.smartcomputersketech.co.ke/wp-content/uploads/2024/05/MacBook-pro-15-inch-2017-TouchBar-1.png",
+        "rating": 4.8,
+        "reviews": [
+          {
+            "user": "TechGeek42",
+            "review": "The display is breathtaking, and it's super fast!",
+            "rating": 5
+          },
+          {
+            "user": "SarahLee",
+            "review": "Perfect for work and gaming, though it gets a bit hot under heavy load.",
+            "rating": 4
+          }
+        ],
+        "category": "Laptops"
+      },
+      {
+        "id": "3",
+        "name": "Bluetooth Headphones",
+        "description": "Noise-cancelling Bluetooth headphones with long battery life.",
+        "price": 199.99,
+        "image": "https://m.media-amazon.com/images/I/61h97WlIu4L.jpg",
+        "rating": 4.2,
+        "reviews": [
+          {
+            "user": "MarkJones",
+            "review": "Great sound quality, but the noise-cancelling could be better.",
+            "rating": 4
+          },
+          {
+            "user": "AliceWang",
+            "review": "Comfortable fit and excellent battery life!",
+            "rating": 5
+          }
+        ],
+        "category": "Accessories"
+      },
+      {
+        "id": "4",
+        "name": "Smartwatch S300",
+        "description": "A fitness-focused smartwatch with heart-rate monitoring.",
+        "price": 249.99,
+        "image": "https://talhareviews.store/cdn/shop/files/White_656a9f1a-ce09-4a3e-a094-3e3b7cec0270.jpg?v=1708457064",
+        "rating": 3.9,
+        "reviews": [
+          {
+            "user": "FitFanatic",
+            "review": "Great fitness tracker, but the app is a bit clunky.",
+            "rating": 4
+          },
+          {
+            "user": "EmmaBrown",
+            "review": "I love the heart-rate monitor, but the display could be brighter.",
+            "rating": 3
+          }
+        ],
+        "category": "Accessories"
+      },
+      {
+        "id": "5",
+        "name": "4K Ultra HD TV 55 inch",
+        "description": "A stunning 4K resolution television with HDR support.",
+        "price": 799.99,
+        "image": "https://www.almiriatechstore.co.ke/wp-content/uploads/2019/03/Hisense-55-Inch-4K-Ultra-HD-Smart-TV-with-built-in-WIFI.jpg",
+        "rating": 4.6,
+        "reviews": [
+          {
+            "user": "CinemaLover",
+            "review": "Incredible picture quality! Perfect for movies and gaming.",
+            "rating": 5
+          },
+          {
+            "user": "DavidM",
+            "review": "Good value, but the sound quality could be better.",
+            "rating": 4
+          }
+        ],
+        "category": "TVs"
+      },
+      {
+        "id": "6",
+        "name": "Gaming Laptop X7",
+        "description": "A powerful gaming laptop with NVIDIA RTX graphics and a 17-inch display.",
+        "price": 2299.99,
+        "image": "https://i.ebayimg.com/images/g/GPwAAOSwlvJm~nng/s-l225.jpg",
+        "rating": 4.9,
+        "reviews": [
+          {
+            "user": "GamerPro44",
+            "review": "Best gaming laptop I've ever used! The performance is top-notch.",
+            "rating": 5
+          },
+          {
+            "user": "ChrisM",
+            "review": "Expensive, but worth every penny for gaming and productivity.",
+            "rating": 5
+          }
+        ],
+        "category": "Laptops"
+      },
+      {
+        "id": "7",
+        "name": "Wireless Mouse Pro",
+        "description": "Ergonomic wireless mouse with advanced tracking.",
+        "price": 49.99,
+        "image": "https://m.media-amazon.com/images/I/51iRyfBZtfS._AC_UF894,1000_QL80_.jpg",
+        "rating": 4.4,
+        "reviews": [
+          {
+            "user": "TechieMike",
+            "review": "The tracking is amazing, but it feels a little light.",
+            "rating": 4
+          },
+          {
+            "user": "JuliaG",
+            "review": "Comfortable and responsive, a great addition to my setup.",
+            "rating": 5
+          }
+        ],
+        "category": "Accessories"
+      },
+      {
+        "id": "8",
+        "name": "Smart Home Assistant",
+        "description": "A voice-controlled smart home assistant that helps with daily tasks.",
+        "price": 99.99,
+        "image": "https://imgcdn.stablediffusionweb.com/2024/2/24/af15bea3-109a-4745-b129-b3af01f076d4.jpg",
+        "rating": 4.3,
+        "reviews": [
+          {
+            "user": "HomeTechFan",
+            "review": "Very useful for controlling my smart lights and music.",
+            "rating": 4
+          },
+          {
+            "user": "RachelP",
+            "review": "Great for basic tasks, but struggles with complex commands.",
+            "rating": 4
+          }
+        ],
+        "category": "Home Appliances"
+      },
+      {
+        "id": "9",
+        "name": "Portable Power Bank 20000mAh",
+        "description": "A high-capacity power bank for charging devices on the go.",
+        "price": 39.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmWemqSim9bIeVgPed-9W9p9isWBknJR0t8g&s",
+        "rating": 4.7,
+        "reviews": [
+          {
+            "user": "TravellerTom",
+            "review": "This power bank has saved me during many trips. It charges fast!",
+            "rating": 5
+          },
+          {
+            "user": "LucyS",
+            "review": "Good capacity, but a bit bulky.",
+            "rating": 4
+          }
+        ],
+        "category": "Accessories"
+      },
+      {
+        "id": "10",
+        "name": "Wireless Earbuds X1",
+        "description": "High-quality wireless earbuds with noise-cancelling features.",
+        "price": 119.99,
+        "image": "https://raylaz.pk/cdn/shop/files/2_f91c9f97-b2f8-411b-9ea9-d70fb24f0d1b_2048x.jpg?v=1721492273",
+        "rating": 4.3,
+        "reviews": [
+          {
+            "user": "MusicLover",
+            "review": "Great sound and comfortable fit, but not as durable as I hoped.",
+            "rating": 4
+          },
+          {
+            "user": "AnnieD",
+            "review": "Love the noise cancellation, but battery life could be better.",
+            "rating": 4
+          }
+        ],
+        "category": "Accessories"
+      },
+      {
+        "id": "11",
+        "name": "Smart Drone 4K",
+        "description": "A high-performance drone with 4K camera and GPS tracking.",
+        "price": 899.99,
+        "image": "https://media.takealot.com/covers_images/0b3f47ad595d43e097f064d0e7a8847c/s-pdpxl.file",
+        "rating": 4.6,
+        "reviews": [
+          {
+            "user": "AerialAdventurer",
+            "review": "Amazing footage! The 4K camera is crystal clear, and the drone is easy to fly.",
+            "rating": 5
+          },
+          {
+            "user": "SkyExplorer",
+            "review": "A bit pricey, but worth it for the quality and stability in flight.",
+            "rating": 4
+          }
+        ],
+        "category": "Drones"
+      },
+      {
+        "id": "12",
+        "name": "iPad Pro 12.9-inch",
+        "description": "A powerful tablet with the latest M1 chip, perfect for creative professionals.",
+        "price": 1099.99,
+        "image": "https://phonesstorekenya.com/wp-content/uploads/2020/08/Apple-iPad-Pro-2020-12.9-Inch-a.jpg",
+        "rating": 4.7,
+        "reviews": [
+          {
+            "user": "CreativeGuru",
+            "review": "The best tablet I've used! It's fast, responsive, and the display is stunning.",
+            "rating": 5
+          },
+          {
+            "user": "TechieTim",
+            "review": "Great for multitasking and drawing, though the price is a bit high.",
+            "rating": 4
+          }
+        ],
+        "category": "Tablets"
+      }
+    ]
+  }
+  
