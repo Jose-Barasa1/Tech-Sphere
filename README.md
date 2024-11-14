@@ -13,7 +13,7 @@ Frontend:
 React: For building the user interface.
 React Router: For navigation.
 Bootstrap: For responsive UI components.
-Mock API:
+Mock API: JSON Server: Provides a mock REST API that simulates a backend using a local db.json file, where product and review data are stored.
 
 JSON Server: Provides a local REST API using db.json for product and review data.
 Installation
