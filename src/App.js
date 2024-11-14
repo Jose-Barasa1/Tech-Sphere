@@ -6,12 +6,17 @@ import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import About from './components/About';
+<<<<<<< HEAD
 import Reviews from './components/Reviews';
+=======
+import Reviews from './components/Reviews'; // Import Reviews component
+>>>>>>> 595c352b07b0bdb1a02af199afa5b2fedf7af0b5
 import Menu from './components/Menu';
 import Navbar from './components/Navbar';
 import ProductDetails from './components/ProductDetails';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
+<<<<<<< HEAD
 
 // ProtectedRoute component
 const ProtectedRoute = ({ element }) => {
@@ -23,6 +28,19 @@ const ProtectedRoute = ({ element }) => {
   }
 
   return element; // Return the requested element if authenticated
+=======
+import Newsletter from './components/Newsletter';
+
+// ProtectedRoute component
+const ProtectedRoute = ({ element }) => {
+  const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+
+  if (!isAuthenticated) {
+    return <Navigate to="/signin" />;
+  }
+
+  return element;
+>>>>>>> 595c352b07b0bdb1a02af199afa5b2fedf7af0b5
 };
 
 function App() {
@@ -30,7 +48,11 @@ function App() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
+<<<<<<< HEAD
     fetch(`http://localhost:3000/products`)
+=======
+    fetch('http://localhost:8000/products')
+>>>>>>> 595c352b07b0bdb1a02af199afa5b2fedf7af0b5
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error('Error loading products:', error));
@@ -51,7 +73,11 @@ function App() {
   return (
     <Router>
       <div>
+<<<<<<< HEAD
         <Navbar />
+=======
+        <Navbar cart={cart} />
+>>>>>>> 595c352b07b0bdb1a02af199afa5b2fedf7af0b5
         <div className="container mt-4">
           <Routes>
             {/* Public Routes */}
@@ -71,6 +97,7 @@ function App() {
               path="/checkout"
               element={<ProtectedRoute element={<Checkout cart={cart} clearCart={clearCart} />} />}
             />
+<<<<<<< HEAD
             <Route
               path="/about"
               element={<ProtectedRoute element={<About />} />}
@@ -83,10 +110,23 @@ function App() {
               path="/menu"
               element={<ProtectedRoute element={<Menu products={products} />} />}
             />
+=======
+            <Route path="/about" element={<ProtectedRoute element={<About />} />} />
+            <Route path="/menu" element={<ProtectedRoute element={<Menu products={products} />} />} />
+>>>>>>> 595c352b07b0bdb1a02af199afa5b2fedf7af0b5
             <Route
               path="/product/:id"
               element={<ProtectedRoute element={<ProductDetails products={products} addToCart={addToCart} />} />}
             />
+<<<<<<< HEAD
+=======
+
+            {/* Add the Reviews Route */}
+            <Route path="/reviews" element={<ProtectedRoute element={<Reviews />} />} />
+            
+            {/* Newsletter Route */}
+            <Route path="/newsletter" element={<Newsletter />} />
+>>>>>>> 595c352b07b0bdb1a02af199afa5b2fedf7af0b5
           </Routes>
         </div>
       </div>
@@ -95,3 +135,4 @@ function App() {
 }
 
 export default App;
+
