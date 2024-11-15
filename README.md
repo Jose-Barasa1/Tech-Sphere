@@ -2,7 +2,9 @@
 #### The app is an electronic online shop,15/11/2024
 #### **By Jose' Barasa and Fahmo Abdisalan**
 ## Description
- By simplifying the ordering procedure and enabling users to place orders straight from their smartphones, MealMate transforms the eating experience. The waitstaff's burden is greatly decreased by this creative method, freeing them up to concentrate on serving customers rather than taking orders. The software guarantees that consumers receive their meals precisely and on time by removing communication barriers, which raises customer satisfaction levels overall. In the end, our solution promotes a more effective dining atmosphere that benefits both customers and employees.
+ At TechSphere, we are deeply passionate about bridging the gap in accessing electronic products, especially for underserved communities. By making technology more affordable and accessible, we strive to empower individuals and businesses with the tools they need to succeed. Our mission is to break down barriers, so that everyone, regardless of their background or location, can harness the transformative power of technology.
+
+We provide a wide range of quality items at affordable prices, ensuring that shopping with us is simple, fun, and convenient for everyone. Our commitment to customer satisfaction and service sets us apart from the rest. We believe in the power of technology to change lives, and we are here to make that happen for you.
 
 ## Setup/Installation Ins
 * Download a zip in the code button to the desired folder
