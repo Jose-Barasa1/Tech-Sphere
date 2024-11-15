@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Cart = ({ cart, removeFromCart }) => {
+const Cart = ({ cart, removeFromCart, clearCart }) => {
   const total = cart.reduce((acc, product) => acc + product.price, 0).toFixed(2);
 
   // Handle removing an item from the cart
@@ -9,12 +9,15 @@ const Cart = ({ cart, removeFromCart }) => {
     removeFromCart(id); // Call the remove function from the parent component
   };
 
+ 
+
+
   return (
     <div className="container mt-4">
       <h2 className="text-center mb-4">Your Shopping Cart</h2>
 
       {cart.length === 0 ? (
-        <p>Your cart is empty!</p>
+        <p className="text-center">Your cart is empty!</p>
       ) : (
         <div>
           {/* Stylish Curved Cart Box */}
@@ -36,13 +39,13 @@ const Cart = ({ cart, removeFromCart }) => {
                     className="img-thumbnail me-3"
                     style={{ width: '80px', height: '80px' }}
                   />
-                  <div>
+                  <div className="w-100">
                     <h6>{product.name}</h6>
                     <p>{product.description}</p>
                     <p><strong>${product.price.toFixed(2)}</strong></p>
                     <button
                       onClick={() => handleRemoveItem(product.id)}
-                      className="btn btn-danger btn-sm"
+                      className="btn btn-dark btn-sm"
                     >
                       Remove
                     </button>
@@ -52,7 +55,7 @@ const Cart = ({ cart, removeFromCart }) => {
             </div>
           </div>
 
-          {/* Total and Checkout Button */}
+          {/* Total, Clear Cart, and Checkout Buttons */}
           <div className="total-box p-3" style={{
             borderRadius: '15px',
             border: '1px solid #ddd',
@@ -63,7 +66,13 @@ const Cart = ({ cart, removeFromCart }) => {
             textAlign: 'center',
           }}>
             <h4>Total: <strong>${total}</strong></h4>
-            <Link to="/checkout" className="btn btn-success mt-3">Proceed to Checkout</Link>
+
+    
+
+            {/* Proceed to Checkout Button */}
+            <Link to="/checkout" className="btn btn-dark mt-3 ms-2">
+              Proceed to Checkout
+            </Link>
           </div>
         </div>
       )}
@@ -72,4 +81,3 @@ const Cart = ({ cart, removeFromCart }) => {
 };
 
 export default Cart;
-

@@ -37,7 +37,7 @@
   }
   
   .btn-danger {
-    background-color: #f44336;
+    background-color: #050505;
     border: none;
     color: white;
     transition: background-color 0.3s ease;
@@ -48,7 +48,7 @@
   }
   
   .btn-success {
-    background-color: #4caf50;
+    background-color: black;
     border: none;
     color: white;
     transition: background-color 0.3s ease;

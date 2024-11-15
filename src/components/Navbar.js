@@ -1,14 +1,18 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ cart = [] }) => {
   const navigate = useNavigate();
   const isAuthenticated = localStorage.getItem('isAuthenticated');
 
+  // Handle logout
   const handleLogout = () => {
     localStorage.removeItem('isAuthenticated');
-    navigate('/signin'); // Redirect to Sign In page
+    navigate('/signin');
   };
+
+  // Calculate the number of items in the cart
+  const itemCount = cart.length;
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3">
@@ -48,12 +52,32 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/menu">
-                <i className="fa fa-list me-2"></i> Menu {/* Updated icon here */}
+                <i className="fa fa-list me-2"></i> Menu
               </Link>
             </li>
+
+            {/* Cart with item count */}
             <li className="nav-item">
-              <Link className="nav-link" to="/cart">
+              <Link className="nav-link position-relative" to="/cart">
                 <i className="fa fa-shopping-cart me-2"></i> Cart
+                {itemCount > 0 && (
+                  <span
+                    className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark text-white"
+                    style={{
+                      fontSize: '12px',
+                      padding: '5px',
+                    }}
+                  >
+                    ({itemCount})
+                  </span>
+                )}
+              </Link>
+            </li>
+
+            {/* Newsletter link */}
+            <li className="nav-item">
+              <Link className="nav-link" to="/newsletter">
+                <i className="fa fa-envelope me-2"></i> Newsletter
               </Link>
             </li>
 

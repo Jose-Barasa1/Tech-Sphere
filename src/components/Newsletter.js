@@ -1,12 +1,17 @@
-// src/components/Newsletter.js
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Newsletter = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const navigate = useNavigate();
+
+  // Validate email format (basic)
+  const validateEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  };
 
   // Handle form submission
   const handleSubscribe = (e) => {
@@ -17,11 +22,22 @@ const Newsletter = () => {
       return;
     }
 
-    // Here you can handle the actual subscription logic, like calling an API
-    // For now, we are just simulating the subscription
+    if (!validateEmail(email)) {
+      setMessage('Please enter a valid email format.');
+      return;
+    }
+
+    // Simulate the subscription (replace with actual API call)
     setIsSubscribed(true);
     setMessage('Thank you for subscribing to our newsletter!');
-    setEmail(''); // Reset email field
+
+    // Clear the email input
+    setEmail('');
+
+    // Redirect to the home page or another page after subscription
+    setTimeout(() => {
+      navigate('/');  // Navigate to home or any other route
+    }, 2000);
   };
 
   // Handle email input change
@@ -69,7 +85,7 @@ const Newsletter = () => {
                 </form>
 
                 <div className="mt-4 text-center">
-                  <p>Already subscribed? <a href="#" onClick={() => navigate('/about')}>Manage your preferences</a></p>
+                  <p>Already subscribed? <Link to="/about">Manage your preferences</Link></p>
                 </div>
               </>
             )}

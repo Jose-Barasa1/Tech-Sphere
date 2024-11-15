@@ -1,4 +1,3 @@
-// src/components/ProductList.js
 import React from 'react';
 import ProductCard from './ProductCard';
 
@@ -6,7 +5,9 @@ const ProductList = ({ products, addToCart }) => {
   return (
     <div className="row">
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} addToCart={addToCart} />
+        <div key={product.id} className="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <ProductCard product={product} addToCart={addToCart} />
+          </div>
       ))}
     </div>
   );

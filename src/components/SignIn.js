@@ -53,7 +53,7 @@ const SignIn = () => {
               />
             </div>
             <div className="text-center">
-              <button type="submit" className="btn btn-primary w-100">
+              <button type="submit" className="btn btn-dark w-100">
                 Sign In
               </button>
             </div>

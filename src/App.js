@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-
+import Payment from './components/payment';  // Import the Payment component
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
@@ -12,6 +12,7 @@ import Navbar from './components/Navbar';
 import ProductDetails from './components/ProductDetails';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
+import Newsletter from './components/Newsletter';  // Import the Newsletter component
 
 // ProtectedRoute component
 const ProtectedRoute = ({ element }) => {
@@ -30,6 +31,7 @@ function App() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
+    // Load products from API
     fetch(`http://localhost:3000/products`)
       .then((response) => response.json())
       .then((data) => setProducts(data))
@@ -51,12 +53,15 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar />
+        {/* Pass the cart length to the Navbar for displaying the number of items */}
+        <Navbar cart={cart} cartLength={cart.length} /> 
+
         <div className="container mt-4">
           <Routes>
             {/* Public Routes */}
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
+            <Route path="/newsletter" element={<Newsletter />} /> {/* Added the Newsletter Route */}
 
             {/* Protected Routes */}
             <Route
@@ -70,6 +75,10 @@ function App() {
             <Route
               path="/checkout"
               element={<ProtectedRoute element={<Checkout cart={cart} clearCart={clearCart} />} />}
+            />
+            <Route
+              path="/payment"
+              element={<ProtectedRoute element={<Payment cart={cart} clearCart={clearCart} />} />}  
             />
             <Route
               path="/about"

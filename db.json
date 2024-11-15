@@ -18,7 +18,8 @@
           "review": "Good value for the price, but battery life could be better.",
           "rating": 4
         }
-      ]
+      ],
+      "category": "Phones"
     },
     {
       "id": "2",
@@ -38,7 +39,8 @@
           "review": "Perfect for work and gaming, though it gets a bit hot under heavy load.",
           "rating": 4
         }
-      ]
+      ],
+      "category": "Laptops"
     },
     {
       "id": "3",
@@ -58,7 +60,8 @@
           "review": "Comfortable fit and excellent battery life!",
           "rating": 5
         }
-      ]
+      ],
+      "category": "Accessories"
     },
     {
       "id": "4",
@@ -78,7 +81,8 @@
           "review": "I love the heart-rate monitor, but the display could be brighter.",
           "rating": 3
         }
-      ]
+      ],
+      "category": "Accessories"
     },
     {
       "id": "5",
@@ -98,7 +102,8 @@
           "review": "Good value, but the sound quality could be better.",
           "rating": 4
         }
-      ]
+      ],
+      "category": "TVs"
     },
     {
       "id": "6",
@@ -118,7 +123,8 @@
           "review": "Expensive, but worth every penny for gaming and productivity.",
           "rating": 5
         }
-      ]
+      ],
+      "category": "Laptops"
     },
     {
       "id": "7",
@@ -138,14 +144,15 @@
           "review": "Comfortable and responsive, a great addition to my setup.",
           "rating": 5
         }
-      ]
+      ],
+      "category": "Accessories"
     },
     {
       "id": "8",
       "name": "Smart Home Assistant",
       "description": "A voice-controlled smart home assistant that helps with daily tasks.",
       "price": 99.99,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYgSX7H8cr66r97aAh9sU7QUSVVRWteMPSsQ&s",
+      "image": "https://imgcdn.stablediffusionweb.com/2024/2/24/af15bea3-109a-4745-b129-b3af01f076d4.jpg",
       "rating": 4.3,
       "reviews": [
         {
@@ -158,7 +165,8 @@
           "review": "Great for basic tasks, but struggles with complex commands.",
           "rating": 4
         }
-      ]
+      ],
+      "category": "Home Appliances"
     },
     {
       "id": "9",
@@ -178,7 +186,8 @@
           "review": "Good capacity, but a bit bulky.",
           "rating": 4
         }
-      ]
+      ],
+      "category": "Accessories"
     },
     {
       "id": "10",
@@ -198,7 +207,51 @@
           "review": "Love the noise cancellation, but battery life could be better.",
           "rating": 4
         }
-      ]
+      ],
+      "category": "Accessories"
+    },
+    {
+      "id": "11",
+      "name": "Smart Drone 4K",
+      "description": "A high-performance drone with 4K camera and GPS tracking.",
+      "price": 899.99,
+      "image": "https://media.takealot.com/covers_images/0b3f47ad595d43e097f064d0e7a8847c/s-pdpxl.file",
+      "rating": 4.6,
+      "reviews": [
+        {
+          "user": "AerialAdventurer",
+          "review": "Amazing footage! The 4K camera is crystal clear, and the drone is easy to fly.",
+          "rating": 5
+        },
+        {
+          "user": "SkyExplorer",
+          "review": "A bit pricey, but worth it for the quality and stability in flight.",
+          "rating": 4
+        }
+      ],
+      "category": "Drones"
+    },
+    {
+      "id": "12",
+      "name": "iPad Pro 12.9-inch",
+      "description": "A powerful tablet with the latest M1 chip, perfect for creative professionals.",
+      "price": 1099.99,
+      "image": "https://phonesstorekenya.com/wp-content/uploads/2020/08/Apple-iPad-Pro-2020-12.9-Inch-a.jpg",
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "CreativeGuru",
+          "review": "The best tablet I've used! It's fast, responsive, and the display is stunning.",
+          "rating": 5
+        },
+        {
+          "user": "TechieTim",
+          "review": "Great for multitasking and drawing, though the price is a bit high.",
+          "rating": 4
+        }
+      ],
+      "category": "Tablets"
     }
   ]
 }
+

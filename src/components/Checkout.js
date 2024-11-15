@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Checkout = ({ cart, clearCart }) => {
   const total = cart.reduce((acc, product) => acc + product.price, 0).toFixed(2);
-
   const navigate = useNavigate();
 
   // Navigate to the products page
@@ -11,9 +10,9 @@ const Checkout = ({ cart, clearCart }) => {
     navigate('/'); // Goes to the homepage or product list
   };
 
-  const handleCompletePurchase = () => {
-    alert('Thank you for your purchase!');
-    clearCart();
+  // Navigate to the payment page after checkout
+  const handleProceedToPayment = () => {
+    navigate('/payment');  // Navigate to the payment page
   };
 
   return (
@@ -67,13 +66,13 @@ const Checkout = ({ cart, clearCart }) => {
 
           {/* Checkout buttons */}
           <div className="mt-4 text-center">
-            <button onClick={clearCart} className="btn btn-danger me-3">
+            <button onClick={clearCart} className="btn btn-dark me-3">
               Clear Cart
             </button>
-            <button onClick={handleCompletePurchase} className="btn btn-success me-3">
-              Complete Purchase
+            <button onClick={handleProceedToPayment} className="btn btn-dark me-3">
+              Proceed to Payment
             </button>
-            <button onClick={handleBackToProducts} className="btn btn-secondary">
+            <button onClick={handleBackToProducts} className="btn btn-dark">
               Back to Products
             </button>
           </div>
@@ -84,3 +83,4 @@ const Checkout = ({ cart, clearCart }) => {
 };
 
 export default Checkout;
+
