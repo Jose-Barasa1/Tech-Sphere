@@ -6,23 +6,23 @@ import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import About from './components/About';
-import Reviews from './components/Reviews';
+import Reviews from './components/Reviews'; // Import Reviews component
 import Menu from './components/Menu';
 import Navbar from './components/Navbar';
 import ProductDetails from './components/ProductDetails';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
+import Newsletter from './components/Newsletter';
 
 // ProtectedRoute component
 const ProtectedRoute = ({ element }) => {
-  const isAuthenticated = localStorage.getItem('isAuthenticated'); // Check if user is authenticated
+  const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
 
   if (!isAuthenticated) {
-    // If not authenticated, redirect to Sign Up
-    return <Navigate to="/signup" />;
+    return <Navigate to="/signin" />;
   }
 
-  return element; // Return the requested element if authenticated
+  return element;
 };
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/products`)
+    fetch('http://localhost:3000/products')
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error('Error loading products:', error));
@@ -51,7 +51,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar />
+        <Navbar cart={cart} />
         <div className="container mt-4">
           <Routes>
             {/* Public Routes */}
@@ -71,22 +71,18 @@ function App() {
               path="/checkout"
               element={<ProtectedRoute element={<Checkout cart={cart} clearCart={clearCart} />} />}
             />
-            <Route
-              path="/about"
-              element={<ProtectedRoute element={<About />} />}
-            />
-            <Route
-              path="/reviews"
-              element={<ProtectedRoute element={<Reviews />} />}
-            />
-            <Route
-              path="/menu"
-              element={<ProtectedRoute element={<Menu products={products} />} />}
-            />
+            <Route path="/about" element={<ProtectedRoute element={<About />} />} />
+            <Route path="/menu" element={<ProtectedRoute element={<Menu products={products} />} />} />
             <Route
               path="/product/:id"
               element={<ProtectedRoute element={<ProductDetails products={products} addToCart={addToCart} />} />}
             />
+
+            {/* Add the Reviews Route */}
+            <Route path="/reviews" element={<ProtectedRoute element={<Reviews />} />} />
+            
+            {/* Newsletter Route */}
+            <Route path="/newsletter" element={<Newsletter />} />
           </Routes>
         </div>
       </div>
@@ -95,3 +91,4 @@ function App() {
 }
 
 export default App;
+

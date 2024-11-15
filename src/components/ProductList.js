@@ -6,7 +6,9 @@ const ProductList = ({ products, addToCart }) => {
   return (
     <div className="row">
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} addToCart={addToCart} />
+        <div key={product.id} className="col-md-4 mb-4">
+          <ProductCard product={product} addToCart={addToCart} />
+        </div>
       ))}
     </div>
   );
